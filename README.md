@@ -34,8 +34,14 @@
 ![](https://raw.githubusercontent.com/mediaic/NTU_PhD_Dissertation/master/image/2_4.png)
 
 ### 浮水印
-* 由於「[臺大電子學位論文上傳手冊](http://www.lib.ntu.edu.tw/doc/cl/etdsguide.pdf)」內提供之[校徽圖檔](http://www.lib.ntu.edu.tw/doc/CL/watermark.pdf)並非向量檔，且畫質低落，不符大眾美感。因此，我們另外找了[校徽向量檔](https://raw.githubusercontent.com/mediaic/NTU_PhD_Dissertation/master/doc/National_Taiwan_University_logo_gray.pdf)，並已置於資料夾**doc**內。
+* 由於「[臺大電子學位論文上傳手冊](http://www.lib.ntu.edu.tw/doc/cl/etdsguide.pdf)」內提供之[校徽圖檔](http://www.lib.ntu.edu.tw/doc/CL/watermark.pdf)並非向量檔，且畫質低落，不符大眾美感。因此，我們另外找了[校徽向量檔](https://raw.githubusercontent.com/mediaic/NTU_PhD_Dissertation/master/doc/National_Taiwan_University_logo_gray.pdf)，並已置於資料夾**figure**內。
+* 因為latex並不好支援透明度，所以我們產生一個符合美感之高解析度、調亮過的png放在一起。
 * 另外，為了提升畫面整理視覺舒適度，我們在校徽浮水印設定上也略與學校建議不同；然而本設定也已通過學校認可，請安心服用。
+#### 論文本文步驟
+可以在dissertation.tex裡面，移除有AddToShipoutPictureBG這行的註解就可以加上浮水印。
+
+#### 其他頁面步驟
+**（之後會設法提供只用latex就完成的步驟）**
 
 以下示範如何透過使用**Adobe Acrobat Pro**插入校徽浮水印。首先，選擇右邊選單之**Watermark**：
 ![](https://raw.githubusercontent.com/mediaic/NTU_PhD_Dissertation/master/image/3_1.png)

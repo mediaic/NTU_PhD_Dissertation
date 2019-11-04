@@ -24,8 +24,6 @@
 \usepackage{makecell}
 \usepackage{sidecap}
 
-\graphicspath{{figures}{example}}
-
 % Algorithm
 \usepackage[lined,ruled,linesnumbered]{algorithm2e}
 \usepackage{algorithmic}
@@ -41,12 +39,15 @@
 \newcommand{\dbottomrule}{\specialrule{2pt}{0pt}{\belowrulesep}}
 
 \usepackage{paralist}
+\usepackage{caption}
 \usepackage{enumitem}
 
 % Math
 \usepackage{bm} % Make bold, italic math symbols
 \usepackage{epsfig} % for figures
 \usepackage{graphicx} % another package that works for figures
+\graphicspath{{figure/}}
+
 \usepackage{times}
 %\usepackage{mathptmx}
 \usepackage{mathtools}
@@ -63,6 +64,9 @@
 % Comments
 \usepackage{comment}
 
+% for adding NTU logo
+\usepackage{eso-pic}
+
 % Hyperlinks
 \usepackage{url} % Hyphenation of URLs.
 \usepackage{xcolor}
@@ -74,7 +78,7 @@
 \usepackage{bookmark}
 %\usepackage[pagebackref=true,breaklinks=true,colorlinks,bookmarks=false]{hyperref} % remove letterpaper=true,
 %
-\usepackage{slashbox}
+
 \usepackage{xspace}
 %\usepackage[table,caption=false]{xcolor}
 %\usepackage{setspace}
@@ -90,10 +94,9 @@
 % =========================================
 
 % Latin abbreviations
-\newcommand{\etal}{\textit{et al}.~} % ``and others'', ``and co-workers''
-\newcommand{\eg}{e.g.,~} % ``for example''
-\newcommand{\ie}{i.e.,~} % ``that is'', ``in other words''
-\newcommand{\suchthat}{\, \mid \,}
+\newcommand{\etal}{\emph{et al}.} % ``and others'', ``and co-workers''; NOTE: use \etal{} for correct spacing
+\newcommand{\eg}{\emph{e.g.},~} % ``for example''
+\newcommand{\ie}{\emph{i.e.},~} % ``that is'', ``in other words''
 
 % Math related
 \DeclareMathOperator*{\argmin}{\arg\!\min}
@@ -113,6 +116,11 @@
 \setlength{\secmargin}{0.0mm}
 \setlength{\paramargin}{0.0mm}
 \setlength{\figmargin}{0.0mm}
+\renewcommand{\arraystretch}{0.8}
+\setlength{\tabcolsep}{4.5pt}
+\captionsetup[table]{skip=5pt}
+\let\oldtabular\tabular 
+\renewcommand{\tabular}{\footnotesize\oldtabular}
 
 % References for figures, tables, equations, chapters, and sections
 \newcommand{\chref}[1]{Chapter~\ref{ch:#1}}
@@ -162,11 +170,3 @@
 }
 	
 % Customized definition
-\newcommand{\Ic}{\mathcal{I}_{c}}
-\newcommand{\It}{\mathcal{I}_{t}}
-\newcommand{\Ot}{\mathcal{O}_{t}}
-\newcommand{\asin}{\mathrm{asin}}
-\newcommand{\acos}{\mathrm{acos}}
-\newcommand{\atan}{\mathrm{atan}}
-\newcommand{\atanT}{\mathrm{atan2}}
-\newcommand{\dotP}{\mathrm{dot}}
